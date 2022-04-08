@@ -23,6 +23,6 @@ public interface DiagnoseRepository extends JpaRepository<Diagnose, Integer>{
 	@Query(value="select diagnose_code from diagnose_table",nativeQuery = true)
 	public List<String> getCode();
 	
-	@Query(value="from Diagnose")
+	@Query(value="select * from diagnose_table LIMIT 2000",nativeQuery = true)
 	public List<Diagnose> getAllData();
 }
